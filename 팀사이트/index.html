@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 이름 </title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="이름">
+    <meta property="og:description" content="설명">
+    <meta property="og:image" content="이미지">
+    <meta property="og:url" content="사이트 URL">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="이름">
+    <meta name="twitter:description" content="설명">
+    <meta name="twitter:image" content="이미지">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header> <!-- 이 아래도 자신이 원하는 내용을 넣어 주시면 됩니다. -->
+        <nav class="container"> 
+            <div class="logo" data-translate-key="teamName">Architecture</div> 
+            <div class="nav-links">
+                <a href="#team" data-translate-key="team">Team</a>
+                <a href="#projects" data-translate-key="projects">Projects</a>
+                <a href="#contact" data-translate-key="contact">Contact</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <i class="fas fa-cog settings-icon" id="settingsIcon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>  <!-- 이 아래도 자신이 원하는 내용을 넣어 주시면 됩니다. -->
+        <section class="hero container">
+            <h1 class="animate__animated animate__fadeIn" data-translate-key="heroTitle">Team Architecture</h1>
+            <p class="subtitle animate__animated animate__fadeIn" data-translate-key="heroSubtitle">We create advanced Discord bots and web applications to enhance your online experience.</p>
+            <a href="#contact" class="btn animate__animated animate__fadeIn" data-translate-key="getInTouch">Get in Touch</a>
+        </section>
+
+        <section id="team" class="team-section">
+            <div class="container">
+                <h2 class="animate-on-scroll" data-translate-key="ourTeam">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-card animate-on-scroll">
+                        <img src="assets/zyn.png" alt="Zyn">
+                        <h3>Zyn</h3>
+                        <p data-translate-key="zynRole">Main Developer</p>
+                        <button class="btn" onclick="openTeamModal(1)" data-translate-key="learnMore">Learn More</button>
+                    </div>
+                    <div class="team-card animate-on-scroll">
+                        <img src="assets/dkpro.png" alt="dk">
+                        <h3>dk</h3>
+                        <p data-translate-key="dkRole">Co-Developer</p>
+                        <button class="btn" onclick="openTeamModal(2)" data-translate-key="learnMore">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="project-section">
+            <div class="container">
+                <h2 class="animate-on-scroll" data-translate-key="ourProjects">Our Projects</h2>
+                <div class="project-card animate-on-scroll">
+                    <h3>Hannibot</h3>
+                    <p data-translate-key="hannibotDescription">An intelligent Discord bot providing NewJeans information and server management features.</p>
+                    <button class="btn" onclick="openProjectModal(1)" data-translate-key="projectDetails">Project Details</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="animate-on-scroll" data-translate-key="getInTouch">Get In Touch</h2>
+                <form class="contact-form" action="getfrom id" method="POST">
+                    <div class="form-group">
+                        <label for="name" data-translate-key="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate-key="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate-key="message">Message</label>
+                        <textarea id="message" name="message" required maxlength="2000"></textarea>
+                        <small id="charCount" data-translate-key="charCount">0 / 2000</small>
+                    </div>
+                    <button type="submit" class="btn" data-translate-key="sendMessage">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-links">
+                    <h4 data-translate-key="team">Team</h4>
+                    <ul>
+                        <li><a href="#team" data-translate-key="ourTeam">Our Team</a></li>
+                        <li><a href="#projects" data-translate-key="projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate-key="contact">Contact</h4>
+                    <ul>
+                        <li><a href="#contact" data-translate-key="getInTouch">Get in Touch</a></li>
+                        <li><a href="https://discord.gg/EgKFTcNvkd" data-translate-key="supportServer">Support Server</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate-key="legal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-translate-key="termsOfService">Terms of Service</a></li>
+                        <li><a href="#" data-translate-key="privacyPolicy">Privacy Policy</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://github.com/zynesa"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2025 Team Architecture. <span data-translate-key="allRightsReserved">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2 data-translate-key="settings">Settings</h2>
+            <div class="setting-item">
+                <label for="language" data-translate-key="language">Language</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="ko">한국어</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <div class="theme-toggle">
+                    <span data-translate-key="darkMode">Dark Mode</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <button class="btn" onclick="closeModal('settingsModal')" data-translate-key="close">Close</button>
+        </div>
+    </div>
+
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('teamModal')">&times;</span>
+            <div id="teamModalContent"></div>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('projectModal')">&times;</span>
+            <div id="projectModalContent"></div>
+        </div>
+    </div>
+</body>
+</html>
